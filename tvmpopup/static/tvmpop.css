@@ -1,0 +1,137 @@
+#loader{
+    display:none;
+    height: 100vh;
+    margin: 0px;
+    align-items: center;
+}
+
+form{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    color: #f8f8f8;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+.popup-image{
+    width: 15vw;
+    height: auto;
+    margin: auto;
+}
+
+.popup-name{
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #8cbae2;
+    border-bottom: 2px solid #5d6892;
+    text-transform: none;
+    text-decoration: none;
+    overflow-wrap: break-word;
+    font-size: 16px;
+}
+
+#error{
+    display: none;
+    color: #ff0500;
+    font-family: monospace;
+    text-transform: uppercase;
+    background-color: #000000;
+}
+
+#screens-list{
+    display: none;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.link{
+    margin: 2px;
+    border: 2px solid #5d6892;
+    font-family: monospace;
+    flex: 1;
+    border-radius: 8px;
+    padding: 1px;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: #adc8ce;
+}
+
+h2{
+    text-transform: uppercase;
+    color: #00475a;
+    font-family: monospace;
+}
+
+h1{
+    cursor: default;
+    user-select: none;
+}
+
+.btn{
+    text-transform: uppercase;
+    height: 30px;
+    width: 100px;
+    margin: 20px auto;
+    border: 0;
+}
+
+.btn:hover{
+    background-color: #fdfffd;
+}
+
+.btn:focus{
+    background-color: red;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    width: 300px;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #00475a;
+}
+
+h1 {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #00475a, #e4e4e4, #00475a);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}

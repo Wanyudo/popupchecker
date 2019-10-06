@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'tvmpop.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>TVM Popups</title>
+</head>
+<body>
+    <h1 id="loader">generating screenshots</h1>
+    <form id="form-params" action="/popups/">
+        <div class="form-row"><span>Resolution:</span>      <input id="res"     type="text" name="res" value="800x600"></div>
+        <div class="form-row"><span>Domain:</span>          <input id="domain"  type="text" name="domain" value="https://player.tvmucho.com"></div>
+        <div class="form-row"><span>Activation code:</span> <input id="code"    type="text" name="code" value="*enter your code*"></div>
+        <div class="form-row"><span>Language:</span>        <input id="lang"    type="text" name="language" value="French"></div>
+        <input id="submitter" class="btn" type="submit" value="Generate">
+    </form>
+    <div id="screens-list">
+    </div>
+    <div id="error">
+        Error! Something went wrong.
+    </div>
+</body>
+<script src="{% static 'initiate.js' %}"></script>
+<script src="{% static 'axios.js' %}"></script>
+</html>

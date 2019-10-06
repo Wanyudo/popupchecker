@@ -1,0 +1,14 @@
+.idea/*
+.idea/
+env/*
+venv/*
+env/
+env
+venv/
+venv
+tika/
+tika/*
+chromedriver.exe
+chromedriver
+chrome.deb
+tvmpopup/static/screenshots/*
