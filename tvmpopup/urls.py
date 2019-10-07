@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from tvmpopup.views import getPopupScreenshots, index_view
+from tvmpopup.views import get_popup_screenshots, index_view
 
 urlpatterns = [
     path('', index_view),
     path('admin/', admin.site.urls),
     # popups/?res=1920x1080&domain=https://player.tvmucho.com&code=3le843&language=English
-    path('popups/', getPopupScreenshots),
+    path('popups/', get_popup_screenshots),
 ]
 
 

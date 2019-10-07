@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# os.environ['chromedriver'] = "/usr/local/bin/chromedriver"
-os.environ['chromedriver'] = ""
+os.environ['chromedriver'] = "/usr/local/bin/chromedriver"
+# os.environ['chromedriver'] = "" # for windows. Place driver.exe in same folder
 
 # Application definition
 

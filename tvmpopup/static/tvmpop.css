@@ -1,8 +1,28 @@
-#loader{
+#loader-wrapper{
     display:none;
     height: 100vh;
-    margin: 0px;
+    margin: 0;
     align-items: center;
+    flex-direction: column;
+}
+
+#form-error{
+    display: none;
+    color: red;
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#progress{
+    margin-bottom: auto;
+    color: #cad5d8;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+#loader{
+    margin-top: auto;
 }
 
 form{

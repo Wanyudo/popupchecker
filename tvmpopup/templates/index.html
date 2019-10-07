@@ -7,13 +7,26 @@
     <title>TVM Popups</title>
 </head>
 <body>
-    <h1 id="loader">generating screenshots</h1>
+    <div id="loader-wrapper">
+        <h1 id="loader">generating screenshots</h1>
+        <div id="progress">Initializing...</div>
+    </div>
     <form id="form-params" action="/popups/">
         <div class="form-row"><span>Resolution:</span>      <input id="res"     type="text" name="res" value="800x600"></div>
         <div class="form-row"><span>Domain:</span>          <input id="domain"  type="text" name="domain" value="https://player.tvmucho.com"></div>
         <div class="form-row"><span>Activation code:</span> <input id="code"    type="text" name="code" value="*enter your code*"></div>
         <div class="form-row"><span>Language:</span>        <input id="lang"    type="text" name="language" value="French"></div>
+        <div class="form-row"><span>Area of screen:</span>
+<!--            <input id="segment" type="" name="language" value="French">-->
+        <label>
+            <select id="segment" name="segment">
+                <option value="Fullscreen">Fullscreen</option>
+                <option value="Element">Element</option>
+            </select>
+        </label>
+        </div>
         <input id="submitter" class="btn" type="submit" value="Generate">
+        <div id="form-error">Activation code is wrong, please enter correct code!</div>
     </form>
     <div id="screens-list">
     </div>
