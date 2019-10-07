@@ -1,6 +1,6 @@
 # popupchecker
 
-This tool makes screenshot of pages.
+This tool makes screenshots of pages.
 
 # Usage
 To use in Windows: change os chromedriver variable in settings to "" and ensure that chromedriver.exe in the project's folder.
