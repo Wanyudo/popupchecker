@@ -12,10 +12,24 @@
         <div id="progress">Initializing...</div>
     </div>
     <form id="form-params" action="/popups/">
-        <div class="form-row"><span>Resolution:</span>      <input id="res"     type="text" name="res" value="800x600"></div>
+        <div class="form-row"><span>Resolution:</span>
+            <span class="res-wrapper">
+                <input class="res" id="width"     type="text" name="width" value="800">
+                x
+                <input class="res" id="height"     type="text" name="height" value="600">
+            </span>
+        </div>
         <div class="form-row"><span>Domain:</span>          <input id="domain"  type="text" name="domain" value="https://player.tvmucho.com"></div>
         <div class="form-row"><span>Activation code:</span> <input id="code"    type="text" name="code" value="*enter your code*"></div>
-        <div class="form-row"><span>Language:</span>        <input id="lang"    type="text" name="language" value="French"></div>
+        <div class="form-row"><span>Language:</span>
+            <label>
+            <select id="lang" name="language">
+                <option value="English">English</option>
+                <option value="French">French</option>
+                <option value="Syrian">Syrian</option>
+            </select>
+        </label>
+        </div>
         <div class="form-row"><span>Area of screen:</span>
 <!--            <input id="segment" type="" name="language" value="French">-->
         <label>

@@ -34,6 +34,13 @@ form{
     align-items: center;
 }
 
+input, select{
+    width: 200px;
+    padding: 6px;
+    border-width: 0;
+    box-sizing: content-box;
+}
+
 span{
     color: #f8f8f8;
     text-transform: uppercase;
@@ -57,6 +64,8 @@ span{
     text-decoration: none;
     overflow-wrap: break-word;
     font-size: 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 #error{
@@ -81,7 +90,6 @@ span{
     font-family: monospace;
     flex: 1;
     border-radius: 8px;
-    padding: 1px;
     width: 15vw;
     display: flex;
     flex-direction: column;
@@ -117,11 +125,32 @@ h1{
     background-color: red;
 }
 
+.res-wrapper{
+    width: 212px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.res:first-child{
+    margin-right: 5px;
+}
+
+.res:last-child{
+    margin-left: 5px;
+}
+
+.res{
+    width: 100%;
+    text-align: center;
+}
+
 .form-row{
     display: flex;
     justify-content: space-between;
     margin: 5px 0;
-    width: 300px;
+    width: 350px;
+    align-items: center;
 }
 
 body {

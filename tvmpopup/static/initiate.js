@@ -18,7 +18,7 @@ document.getElementById('submitter').addEventListener("click", function(e){
 
   form.style.display = 'none';
   loader_wrapper.style.display = 'flex';
-  const res = document.getElementById('res').value;
+  const res = document.getElementById('width').value + 'x' + document.getElementById('height').value;
   const domain = document.getElementById('domain').value;
   const code = document.getElementById('code').value;
   const lang = document.getElementById('lang').value;

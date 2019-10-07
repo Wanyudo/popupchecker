@@ -146,9 +146,12 @@ def get_popup_screenshots(request):
     if progress == 30:
         browser.execute_script("$('#nomobilebrowsersupport').hide()")
         browser.execute_script("$('#activatewindow').show()")
-        code_input_field = browser.find_element_by_id("activationcode")
-        code_input_field.send_keys(code)
-        browser.find_element_by_id("signin").click()
+        try:
+            code_input_field = browser.find_element_by_id("activationcode")
+            code_input_field.send_keys(code)
+            browser.find_element_by_id("signin").click()
+        except:
+            pass
 
         return JsonResponse(screenshots, json_dumps_params={'indent': 4}, safe=False)
 
@@ -157,8 +160,11 @@ def get_popup_screenshots(request):
         time.sleep(1)
         save_screenshot(modal_id, 'id', None)
         if button_selector:
-            browser.find_element_by_css_selector(button_selector).click()
-            save_screenshot(modal_id, 'id', button_selector)
+            try:
+                browser.find_element_by_css_selector(button_selector).click()
+                save_screenshot(modal_id, 'id', button_selector)
+            except:
+                pass
 
         browser.execute_script(("$('#{0}').remodal().close()").format(modal_id))
 
@@ -231,8 +237,10 @@ def save_screenshot(name, by, button_selector):
 
     if (segment == 'fullscreen'):
         return browser.save_screenshot(image_path)
-
-    if by == 'class':
-        browser.find_element_by_class_name(name).screenshot(image_path)
-    else:
-        browser.find_element_by_id(name).screenshot(image_path)
+    try:
+        if by == 'class':
+            browser.find_element_by_class_name(name).screenshot(image_path)
+        else:
+            browser.find_element_by_id(name).screenshot(image_path)
+    except:
+        return browser.save_screenshot(image_path)
