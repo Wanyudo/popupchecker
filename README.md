@@ -12,6 +12,16 @@ To build it:
   ```
   docker build --tag=tvmpopups .
   ```
+To run it:
+  ```
+  docker run -p 8000:8000 tvmpopups
+  ```
+To stop it:
+  ```
+  docker container ls
+  docker container stop {container id}
+  ```
+## To push it to Docker Hub and run it from there
 To tag it (needs for push into Docker Hub):
   ```
   docker tag tvmpopups {docker hub username}/tvmpopups:{version name, e.g.: v1}
@@ -22,10 +32,5 @@ To push it:
   ```
 To run it:
   ```
-  docker run -p 8000:8000 tvmpopups
-  ```
-To stop it:
-  ```
-  docker container ls
-  docker container stop {container id}
+  docker run -p 8000:8000 {docker hub username}/tvmpopups:{version name from previous commands}
   ```
